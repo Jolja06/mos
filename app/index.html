@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru RU">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Форма</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"/>
+    <!-- build:css css/vendor.css-->
+    <link href="../bower_components/normalize-css/normalize.css" rel="stylesheet"/>
+    <link href="../bower_components/jquery-ui/themes/base/jquery-ui.css" rel="stylesheet"/>
+    <link href="../bower_components/" rel="stylesheet"/>
+    <!-- endbuild-->
+    <!-- build:css css/main.css-->
+    <link href="css/main.css" rel="stylesheet"/>
+    <!-- endbuild-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="box-forma">
+        <form id="participate" class="forma">
+          <div class="data">
+            <div class="forma__title">Ваши данные</div>
+            <div class="placeholder-wrapp">
+              <input type="text" class="input-style"/><span class="placeholder">Введите Ф.И.О.</span><span class="required">*</span>
+            </div>
+            <div class="placeholder-wrapp">
+              <input type="password" class="input-style input-pass"/><span class="placeholder">Пароль</span><span class="required">*</span><span class="password-eye"></span>
+            </div>
+            <div class="placeholder-wrapp">
+              <input type="email" class="input-style"/><span class="placeholder">Email</span><span class="required">*</span>
+            </div>
+            <select name="city" id="city" class="input-style--select">
+              <option disabled="disabled" selected="selected">Город</option>
+              <option>Калининград</option>
+              <option>Москва</option>
+              <option>Санкт-Петербург</option>
+              <option>Смоленск</option>
+              <option>Уфа</option>
+            </select>
+            <div class="placeholder-wrapp placeholder-wrapp--phone">
+              <input type="tel" id="tel" class="input-style input-style--phone placeholder--focused"/><span class="placeholder placeholder--phone">Телефон</span>
+            </div>
+            <div class="gender__wrapp">
+              <input type="radio" value="male" id="male" name="gender" class="gender__input"/>
+              <label for="male" class="gender__label gender__label--male">Я - парень</label>
+              <input type="radio" value="female" id="female" name="gender" checked="checked" class="gender__input"/>
+              <label for="female" class="gender__label gender__label--female">Я - девушка</label>
+              <div class="gender___radio__border"></div>
+            </div>
+          </div>
+          <div class="important">
+            <div class="forma__title">Важно знать!</div>
+            <div class="important-know">
+              <div class="important-know__img"></div>
+              <div class="important-know__wrap-list">
+                <ol class="important-know__list">
+                  <li class="important-know__list__item">Развивайтесь<br/>не смотря ни на что</li>
+                  <li class="important-know__list__item">Не повторяйте за тем,<br/>кто повторяет</li>
+                </ol>
+              </div>
+            </div>
+            <div class="important-wrapp">
+              <div class="important__load-img">
+                <label class="important__load-img__lable">
+                  <input type="file" class="important__load-img__photo"/>
+                  <div class="important__load-img__border"></div>
+                  <div class="important__load-img__title">Загрузить фото</div>
+                </label>
+              </div>
+            </div>
+            <div class="rule-wrapper">
+              <input type="checkbox" id="rule" class="rule__input"/>
+              <label for="rule" class="rule">Я прочитал и соглашаюсь с <a href="#" class="rule__link">правилами </a>участия в акции.</label>
+              <div class="rule__input__border"></div>
+            </div>
+            <div class="button">
+              <button type="submit" form="participate">Учавствовать</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- build:js js/vendor.min.js-->
+    <!-- bower:js-->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="../bower_components/jquery.maskedinput/dist/jquery.maskedinput.js"></script>
+    <!-- endbower-->
+    <!-- endbuild-->
+    <!-- build:js js/scripts.min.js-->
+    <script src="js/scripts.js"></script>
+    <!-- endbuild-->
+  </body>
+</html>

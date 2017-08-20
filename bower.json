@@ -1,0 +1,20 @@
+{
+  "name": "test task for mos.ru",
+  "authors": [
+    "Elena Anischenkova <elena.an.92@gmail.com>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "normalize-css": "normalize.css#^7.0.0",
+    "jquery-ui": "^1.12.1",
+    "jquery.maskedinput": "^1.4.1"
+  }
+}

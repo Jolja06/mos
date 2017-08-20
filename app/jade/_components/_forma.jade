@@ -1,0 +1,79 @@
+.box-forma
+	form(id="participate").forma
+		.data
+			.forma__title
+				|Ваши данные
+			.placeholder-wrapp
+				input(type='text').input-style
+				span.placeholder
+					|Введите Ф.И.О.
+				span.required *
+			.placeholder-wrapp
+				input(type='password').input-style.input-pass
+				span.placeholder
+					|Пароль
+				span.required *
+				span.password-eye
+			.placeholder-wrapp
+				input(type='email').input-style
+				span.placeholder
+					|Email
+				span.required *
+			select(name='city' id='city').input-style--select
+				option(disabled selected)
+					|Город
+				option
+					|Калининград
+				option
+					|Москва
+				option
+					|Санкт-Петербург
+				option
+					|Смоленск
+				option
+					|Уфа
+			.placeholder-wrapp.placeholder-wrapp--phone
+				input(type='tel' id='tel').input-style.input-style--phone.placeholder--focused
+				span.placeholder.placeholder--phone
+					|Телефон
+			.gender__wrapp
+				input(type='radio' value="male" id="male" name="gender").gender__input
+				label(for="male").gender__label.gender__label--male
+					|Я - парень
+				input(type='radio' value="female" id="female" name="gender" checked).gender__input
+				label(for="female").gender__label.gender__label--female
+					|Я - девушка
+				.gender___radio__border
+		.important
+			.forma__title
+				|Важно знать!
+			.important-know
+				.important-know__img
+				.important-know__wrap-list
+					ol.important-know__list
+						li.important-know__list__item
+							|Развивайтесь
+							br
+							| не смотря ни на что
+						li.important-know__list__item
+							|Не повторяйте за тем,
+							br
+							| кто повторяет
+			.important-wrapp
+				.important__load-img
+					label.important__load-img__lable
+						input(type='file').important__load-img__photo
+						.important__load-img__border
+						.important__load-img__title
+							|Загрузить фото
+			.rule-wrapper
+				input(type='checkbox' id="rule").rule__input
+				label(for='rule').rule
+					|Я прочитал и соглашаюсь с 
+					a(href="#").rule__link
+						|правилами 
+					|участия в акции.
+				.rule__input__border
+			.button
+				button(type="submit" form='participate')
+					|Учавствовать

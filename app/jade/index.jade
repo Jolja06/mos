@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+html(lang="ru RU")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width")
+    title Форма
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:300,400,500")
+    // build:css css/vendor.css
+    link(href="../bower_components/normalize-css/normalize.css" rel="stylesheet")
+    link(href="../bower_components/jquery-ui/themes/base/jquery-ui.css" rel="stylesheet")
+    link(href="../bower_components/" rel="stylesheet")
+    // endbuild
+    // build:css css/main.css
+    link(href="css/main.css" rel="stylesheet")
+    // endbuild
+  body
+    .wrapper
+        include _components/_forma
+    // build:js js/vendor.min.js
+    // bower:js
+    script(src='../bower_components/jquery/dist/jquery.js')
+    script(src='../bower_components/jquery-ui/jquery-ui.js')
+    script(src="../bower_components/jquery.maskedinput/dist/jquery.maskedinput.js")
+    // endbower
+    // endbuild
+    // build:js js/scripts.min.js
+    script(src='js/scripts.js')
+    // endbuild
