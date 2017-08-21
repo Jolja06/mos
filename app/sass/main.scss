@@ -17,6 +17,7 @@ html, body {
 	min-height: 100%;
 }
 .wrapper {
+	background: #5b50c6;
 	background-image: linear-gradient(-153deg, #856dd7 5%, #2328ae 100%);
 	background-repeat: no-repeat;
 	height: 100%;
@@ -24,20 +25,20 @@ html, body {
 	padding: 0;
 	position: relative;
 	min-width: 726px;
-	min-height: 600px;
+	min-height: 600px; 
 }
 .box-forma {
 	background-color: #fff;
 	border-radius: 6px;
 	left: 50%;
 	padding: 30px 30px 56px;
-	position: absolute;
+	position: fixed;
 	top:50%;
 	transform: translate(-50%, -50%);
 	width: 720px;
 }
 .forma{
-	@include clearfix()
+	@include clearfix();
 }
 .data {
 	float: left;
@@ -60,6 +61,26 @@ input, select {
 	border: none;
 	background: #fff;
 
+}
+/* .required {
+	position: relative;
+	&:before {
+		content: '';
+		display: block;
+		width: 25px;
+		height: 20px;
+		background: #000;
+		z-index: 10;
+		position: absolute;
+		right: 35px;
+		top: 10px;
+	}
+} */
+input[type=text]::-ms-clear, input[type=email]::-ms-clear, input[type=tel]::-ms-clear{
+	display: none;
+}
+input[type=password]::-ms-reveal {
+    display: none;
 }
 .placeholder-wrapp {
 	position: relative;
@@ -280,8 +301,8 @@ input, select {
 .rule-wrapper {
 	margin-left: 40px;
 	margin-bottom: 18px;
-	overflow: auto;
 	width: 86.5%;
+	@include clearfix();
 }
 .rule {
 	font-weight: 300;

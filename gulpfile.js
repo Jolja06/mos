@@ -53,6 +53,7 @@ gulp.task('watch', function () {
   gulp.watch('bower.json', ['wiredep']);
   gulp.watch(paths.src.jade, ['jade']);
   gulp.watch(paths.src.scss, ['scss']);
+  gulp.watch(paths.src.scss, ['scssie']);
 });
 
 //Слежка за Bower
@@ -84,9 +85,28 @@ gulp.task('scss', function() {
     .pipe(sourcemaps.init())
         .pipe(sass()
             .on('error', sass.logError))
-        .pipe(prefix("last 2 version", "> 5%", "ie 9"))
+        .pipe(prefix({
+          browsers: ["last 2 version", "> 1%", "ie 9", "ie 8"]
+        }))
     .pipe(sourcemaps.write())
     .pipe(rename('main.css'))
+    .pipe(gulp.dest(paths.dest.css));
+
+});
+
+gulp.task('scssie', function() {
+  return gulp.src('app/sass/mainie.scss')
+   .pipe(cssGlobbing({
+        extensions: ['.scss']
+    }))
+    .pipe(sourcemaps.init())
+        .pipe(sass()
+            .on('error', sass.logError))
+        .pipe(prefix({
+          browsers: ["last 2 version", "> 1%", "ie 9", "ie 8"]
+        }))
+    .pipe(sourcemaps.write())
+    .pipe(rename('mainie.css'))
     .pipe(gulp.dest(paths.dest.css));
 
 });

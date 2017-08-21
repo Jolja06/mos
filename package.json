@@ -1,5 +1,5 @@
 {
-    "name": "test task for mos.ru",
+    "name": "mos.ru",
     "devDependencies": {
         "browser-sync": "^2.18.13",
         "gulp": "^3.9.1",
