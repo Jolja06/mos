@@ -17,7 +17,6 @@ html, body {
 	min-height: 100%;
 }
 .wrapper {
-	background: #5b50c6;
 	background-image: linear-gradient(-153deg, #856dd7 5%, #2328ae 100%);
 	background-repeat: no-repeat;
 	height: 100%;
@@ -62,20 +61,6 @@ input, select {
 	background: #fff;
 
 }
-/* .required {
-	position: relative;
-	&:before {
-		content: '';
-		display: block;
-		width: 25px;
-		height: 20px;
-		background: #000;
-		z-index: 10;
-		position: absolute;
-		right: 35px;
-		top: 10px;
-	}
-} */
 input[type=text]::-ms-clear, input[type=email]::-ms-clear, input[type=tel]::-ms-clear{
 	display: none;
 }
@@ -110,6 +95,9 @@ input[type=password]::-ms-reveal {
 	top: 50%;
 	transform: translateY(-50%);
 }
+.required--phone {
+	color: transparent;
+}
 .password-eye {
 	display: block;
 	width: 26px;
@@ -139,6 +127,9 @@ input[type=password]::-ms-reveal {
 	font-size: 16px;
 	padding: 20px 0 0 20px;
 	background: transparent;
+	&:invalid {
+		box-shadow: none;
+	}
 }
 .input-style--phone {
 	border-color: #b0b7be;
@@ -308,6 +299,7 @@ input[type=password]::-ms-reveal {
 	font-weight: 300;
 	float: left;
 	width: 88%;
+	line-height: 1.39;
 	&:before {
 		content: '';
 		width: 18px;

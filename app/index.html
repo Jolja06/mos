@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru RU">
-  <head>
+  <head> 
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width"/>
@@ -15,12 +15,11 @@
     <link href="css/main.css" rel="stylesheet"/>
     <!-- endbuild-->
     <!-- build:css css/mainie.min.css-->
-    <!-- [if lte IE 9]><link href="css/mainie.css" rel="stylesheet" type="text/css"><![endif]-->
+    <!--[if lte IE 9]><link href="css/mainie.css" rel="stylesheet" type="text/css"><![endif]-->
     <!-- endbuild-->
   </head>
   <body>
     <div class="wrapper">
-      <!-- [if IE]>IE9 show<![endif]-->
       <div class="box-forma">
         <div class="forma-wrapp">
           <form id="participate" class="forma">
@@ -44,7 +43,7 @@
                 <option>Уфа</option>
               </select>
               <div class="placeholder-wrapp placeholder-wrapp--phone">
-                <input type="tel" id="tel" class="input-style input-style--phone placeholder--focused"/><span class="placeholder placeholder--phone">Телефон</span>
+                <input type="tel" id="tel" class="input-style input-style--phone placeholder--focused"/><span class="placeholder placeholder--phone">Телефон</span><span class="required required--phone">*</span>
               </div>
               <div class="gender__wrapp">
                 <input type="radio" value="male" id="male" name="gender" class="gender__input"/>
@@ -89,9 +88,9 @@
     </div>
     <!-- build:js js/vendor.min.js-->
     <!-- bower:js-->
-    <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/jquery-ui/jquery-ui.js"></script>
-    <script src="../bower_components/jquery.maskedinput/dist/jquery.maskedinput.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/jquery.maskedinput/dist/jquery.maskedinput.js"></script>
     <!-- endbower-->
     <!-- endbuild-->
     <!-- build:js js/scripts.min.js-->
